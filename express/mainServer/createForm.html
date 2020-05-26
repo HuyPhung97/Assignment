@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title> Murdoch University </title>
+    <link rel="stylesheet" href="css/createForm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/createForm.js"></script>
+</head>
+<body>
+    <div class="title">
+        <div class="imgIcon">
+            <a href="/"><img src="image/murdoch.png"> </a>
+        </div>
+        <div class="titleWord">
+            <a href="/student">STUDENT </a>
+            <a href="/UC">UC </a>
+            <a href="/ABOUT%20US">ABOUT US </a>
+        </div>
+    </div>
+   
+    <div class="mainBackground">
+        <div id="theLeftBackground">
+            <div class="theOption">
+                <div id="option"> 
+                   <a href="/createForm"> Create new Form </a> 
+                </div>
+                <div id="option"> Create new Form</div>
+            </div>
+        </div>
+        <div id="theRightBackground"> 
+            <div class="mainTitle">
+                <label> Create Form </label>
+            </div>  
+            <div class="containerForm">
+                <div class="containerInfor">
+                    <form id="surveyForm" onsubmit="return checkQuestion()" action="/createForm" method="POST"> 
+                        <!-- Infor of creater -->
+                    <div class="containBase">
+                        <div class="labTitle">
+                            <div id="rowLeft">
+                                <label> ID number </label>
+                            </div>
+                            <div id="rowRight">
+                                 <input type="text" name="idNumber" placeholder="Enter your ID number..." required />
+                            </div>
+                        </div>
+                        <div class="labTitle">
+                            <div id="rowLeft">
+                                <label> Name   </label>
+                            </div>
+                            <div id="rowRight">
+                                 <input type="text" name="nameCreater" placeholder="Enter your name..." required />
+                            </div>
+                        </div>
+                        <div class="labTitle">
+                            <div id="rowLeft">
+                                <label> Email   </label>
+                            </div>
+                            <div id="rowRight">
+                                 <input type="email" name="email" placeholder="Enter your email..." required />
+                            </div>
+                        </div>
+                    </div>
+                        <!-- end infor of creater -->
+                        <!-- title of form  -->
+                    <div class="containBase">
+                        <div class="containTitle">
+                            <div id="title">
+                                 <input type="text" name="title" placeholder="Untitle form .. " />
+                            </div>
+                        </div>
+                        <div class="containDes">
+                            <div id="describle">
+                                 <input type="text" name="describle" placeholder="Any describle..." />
+                            </div>
+                        </div>
+                    </div>
+                    <!--Question -->
+                    <div class="containBase1">
+                        <div id="containQuestion">
+
+                        </div>
+                    </div>
+                    <!-- end of question -->
+                </div>
+            </div>  
+            
+            <div class="handleButton">
+                <div class="button">
+                    <div id="resetButton"> 
+                        <button type="button" onclick="reset123()"> Reset </button>
+                     </div>
+                     <div id="createButton"> 
+                        <button type="button" onclick="createNewQuestion()">Add New </button> 
+                     </div>
+                     <div id="submitButton"> 
+                        <button type="submit">Submit </button> 
+                     </div>
+                </div>
+            </div>
+        </div>
+       
+               
+    </div>
+    
+</body>
+
+</html>
